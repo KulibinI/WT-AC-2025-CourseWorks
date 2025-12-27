@@ -1,7 +1,6 @@
 # RBAC Matrix
 
 | Operation | Admin | User | Service |
-|-----------|-------|------|---------|
 | View users | Yes | No | No |
 | Create user | Yes | No | No |
 | View own user | Yes | Yes | No |

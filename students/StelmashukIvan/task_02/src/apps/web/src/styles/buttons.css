@@ -20,7 +20,7 @@ button.secondary {
   background: #374151;
 }
 
-.button--icon {
+.button-icon {
   display: flex;
   align-items: center;
   gap: 6px;
