@@ -8,6 +8,12 @@ select {
   margin-right: 8px;
 }
 
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
 .form-field {
   display: flex;
   flex-direction: column;
@@ -30,6 +36,21 @@ select {
   transition: var(--transition);
 }
 
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgb(59 130 246 / 10%);
+}
+
+.form-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form-input::placeholder {
+  color: var(--muted);
+}
+
 .form-select {
   width: 100%;
   padding: 10px;
@@ -41,36 +62,15 @@ select {
   transition: var(--transition);
 }
 
-.form-input:focus {
-  outline: none;
-  border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgb(59 130 246 / 10%);
-}
-
 .form-select:focus {
   outline: none;
   border-color: var(--primary);
   box-shadow: 0 0 0 3px rgb(59 130 246 / 10%);
 }
 
-input:focus,
-select:focus {
-  outline: none;
-  border-color: var(--primary);
-}
-
-.form-input:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-}
-
 .form-select:disabled {
   opacity: 0.5;
   cursor: not-allowed;
-}
-
-.form-input::placeholder {
-  color: var(--muted);
 }
 
 .form-select option {
@@ -99,7 +99,6 @@ select:focus {
 }
 
 .form-input:not([type="checkbox"], [type="radio"]):focus,
-.form-select:focus,
 .form-textarea:focus {
   border-color: var(--primary);
   background: var(--bg-input);
